@@ -1,0 +1,23 @@
+{
+  "name": "api-rate-limiter",
+  "version": "1.0.0",
+  "description": "An implementation of Fixed window counter Rate limiting algorithm",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.18",
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.5.3",
+    "redis": "^4.6.10",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
