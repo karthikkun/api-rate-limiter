@@ -5,11 +5,11 @@ const REDIS_CONFIG = {
     PORT: 6379
 }
 
-export const redisClient = (() => {
+export const redis = (() => {
     var redisClient: RedisClientType
     
     return {
-      getInstance: () => {
+      getInstance: async () => {
           if (!redisClient) {
               redisClient = createClient({
                 socket: {
@@ -17,8 +17,9 @@ export const redisClient = (() => {
                     port: REDIS_CONFIG.PORT
                 }
             })
+            await redisClient.connect()
           }
-          return redisClient.connect()
+          return redisClient
       },
     };
   })();
